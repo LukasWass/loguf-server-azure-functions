@@ -1,37 +1,37 @@
 {
-  "name": "loguf-server-azure-functions",
-  "version": "1.0.0",
-  "description": "Loguf Server Azure Functions for loguf package",
-  "main": "./lib/index.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LukasWass/loguf-server-azure-functions.git"
-  },
-  "keywords": [
-    "loguf",
-    "log",
-    "user",
-    "flow",
-    "server",
-    "azure",
-    "functions"
-  ],
-  "author": {
-    "name": "Lukas Wass",
-    "email": "dev@lukaswass.se",
-    "url": "https://github.com/LukasWass"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LukasWass/loguf-server-azure-functions/issues"
-  },
-  "homepage": "https://github.com/LukasWass/loguf-server-azure-functions#readme",
-  "dependencies": {
-    "@azure/cosmos": "^3.9.3",
-    "@azure/functions": "^1.2.2"
-  }
+	"name": "loguf-server-azure-functions",
+	"version": "1.0.1",
+	"description": "Loguf Server Azure Functions for loguf package",
+	"main": "./lib/index.js",
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LukasWass/loguf-server-azure-functions.git"
+	},
+	"keywords": [
+		"loguf",
+		"log",
+		"user",
+		"flow",
+		"server",
+		"azure",
+		"functions"
+	],
+	"author": {
+		"name": "Lukas Wass",
+		"email": "dev@lukaswass.se",
+		"url": "https://github.com/LukasWass"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LukasWass/loguf-server-azure-functions/issues"
+	},
+	"homepage": "https://github.com/LukasWass/loguf-server-azure-functions#readme",
+	"dependencies": {
+		"@azure/cosmos": "^3.9.3",
+		"@azure/functions": "^1.2.2"
+	}
 }

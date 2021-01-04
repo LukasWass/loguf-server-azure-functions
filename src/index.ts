@@ -14,12 +14,18 @@ enum DataType {
 }
 
 interface IPublishData {
+    timestamp: number;
     userId: string;
     type: DataType;
     event: string;
     properties: any;
 }
 
+interface ILoggedData {
+    receivedTimestamp: number;
+    userId: string;
+    logData: IPublishData;
+}
 
 export default class LogufServerAzureFunctions {
     private cosmosdbUri: string = "";
@@ -37,7 +43,14 @@ export default class LogufServerAzureFunctions {
     public createHandler = (): AzureFunction => {
         const httpTrigger = async (context: Context, req: HttpRequest): Promise<void> => {
             try {
-                const data: IPublishData = JSON.parse(req.body);
+                const logData: IPublishData = req.body;
+
+                const data: ILoggedData = {
+                    userId: logData.userId,
+                    receivedTimestamp: new Date().valueOf(),
+                    logData: logData,
+
+                };
 
                 const res = new CosmosClient({
                     endpoint: this.cosmosdbUri,
